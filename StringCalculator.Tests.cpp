@@ -65,6 +65,30 @@ int actualValue=Add(input);
 ASSERT_EQ(actualValue,expectedValue);
 }
 
+TEST(StringCalculatorTestSuite,when_passed_multicharacter_delimiter_SumIsExpected){
+ string input="//[***]\n8***4***3";
+int expectedValue=15;
+int actualValue=Add(input);
+ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite,when_passed_multiple_delimiters_SumIsExpected){
+ string input=""//[*][%]\n4*2%3";
+int expectedValue=9;
+int actualValue=Add(input);
+ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite,when_passed_multiple_multicharacter_delimiters_SumIsExpected){
+ string input="//[**][%^]\n4**1%^9";
+int expectedValue=14;
+int actualValue=Add(input);
+ASSERT_EQ(actualValue,expectedValue);
+}
+
+
+
+
 
 
 
