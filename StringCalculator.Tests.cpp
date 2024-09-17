@@ -54,9 +54,9 @@ ASSERT_EQ(actualValue,expectedValue);
 
 TEST(StringCalculatorTestSuite,when_passed_negative_numbers_throws_an_exception_listing_invalid_values){
  string input="1,-2,-4,5";
-int expectedValue="Negatives not allowed: -2,-4";
+int expectedValue=invalid_argument;
 int actualValue=Add(input);
-ASSERT_EQ(actualValue,expectedValue);
+ASSERT_THROW(actualValue,expectedValue);
 }
 
 
