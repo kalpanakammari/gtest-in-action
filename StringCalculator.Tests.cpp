@@ -3,7 +3,7 @@
 
 TEST(StringCalculatorTestSuite,add_emptyInputString_ZeroIsExpected){
 //Arrange
-  String input="";
+  string input="";
   int expectedValue=0;
 //Act
   int actualValue=Add(input);
