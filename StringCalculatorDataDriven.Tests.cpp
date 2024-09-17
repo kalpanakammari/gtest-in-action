@@ -9,6 +9,32 @@ TestPair(string _input,int _expectedValue) : input{_input}, expectedValue{_expec
 }
 };
 
+class StringCalculatorDataDrivenFixture:public testing::Test{
+
+protected:
+  vector<TestPair*> dataList;
+
+   //Before Each Test Case
+  void SetUp(){
+      dataList.push_back(new TestPair { "",0});
+      dataList.push_back(new TestPair { "0",0});
+      dataList.push_back(new TestPair { "1",1});
+      dataList.push_back(new TestPair { "1,2",3});
+      dataList.push_back(new TestPair { "1,2,3",6});
+  }
+  // After Each Test Case
+void TearDown(){
+    
+    
+};
+
+TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
+     for (TestPair* dataPairPtr : dataList) {
+        int actualValue=Add(dataPairPtr->input);
+        ASSERT_EQ(actualValue,dataPairPtr->expectedValue);
+    }
+}
+
 TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
 vector<TestPair> datalist;
 TestPair pair_one {"",0};
