@@ -73,7 +73,7 @@ ASSERT_EQ(actualValue,expectedValue);
 }
 
 TEST(StringCalculatorTestSuite,when_passed_multiple_delimiters_SumIsExpected){
- string input=""//[*][%]\n4*2%3";
+ string input="//[*][%]\n4*2%3";
 int expectedValue=9;
 int actualValue=Add(input);
 ASSERT_EQ(actualValue,expectedValue);
