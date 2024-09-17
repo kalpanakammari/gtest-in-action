@@ -24,8 +24,11 @@ protected:
   }
   // After Each Test Case
 void TearDown(){
-    
-    
+   for (auto* dataPair : dataList) {
+            delete dataPair;
+        }
+        dataList.clear();
+    }
 };
 
 TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
