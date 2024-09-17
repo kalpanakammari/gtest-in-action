@@ -20,3 +20,29 @@ int actualValue=Add(input);
 //Assert
 ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,add_twoInputString_SumIsExpected){
+//Arrange
+ string input="1,2";
+int expectedValue=3;
+//Act
+int actualValue=Add(input);
+//Assert
+ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite,add_threeInputString_SumIsExpected){
+ string input="1,2,4";
+int expectedValue=7;
+int actualValue=Add(input);
+ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite,when_delimited_with_newline_and_comma_SumIsExpected){
+ string input="1\n2,4";
+int expectedValue=7;
+int actualValue=Add(input);
+ASSERT_EQ(actualValue,expectedValue);
+}
+
+
