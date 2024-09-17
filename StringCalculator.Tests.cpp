@@ -10,3 +10,13 @@ TEST(StringCalculatorTestSuite,add_emptyInputString_ZeroIsExpected){
 //Assert
   ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,add_oneInputString_OneIsExpected){
+//Arrange
+ string input="sony";
+int expectedValue=1;
+//Act
+int actualValue=Add(input);
+//Assert
+ASSERT_EQ(actualValue,expectedValue);
+}
