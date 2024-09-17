@@ -8,7 +8,7 @@ int expectedValue;
 int actualValue;
 };
 
-TEST_F(StringCalculatorTestSuite,add_emptyInputString_ZeroIsExpected){
+TEST_F(StringCalculatorfixture,add_emptyInputString_ZeroIsExpected){
 input="";
 expectedValue=0;
 actualValue=Add(input);
