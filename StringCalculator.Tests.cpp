@@ -47,7 +47,7 @@ ASSERT_EQ(actualValue,expectedValue);
 
 TEST(StringCalculatorTestSuite,when_passed_a_delimiter_SumIsExpected){
  string input="//;\n2;4";
-int expectedValue=7;
+int expectedValue=6;
 int actualValue=Add(input);
 ASSERT_EQ(actualValue,expectedValue);
 }
