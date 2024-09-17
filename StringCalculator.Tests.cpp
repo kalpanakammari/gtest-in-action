@@ -13,7 +13,7 @@ TEST(StringCalculatorTestSuite,add_emptyInputString_ZeroIsExpected){
 
 TEST(StringCalculatorTestSuite,add_oneInputString_OneIsExpected){
 //Arrange
- string input="sony";
+ string input="1";
 int expectedValue=1;
 //Act
 int actualValue=Add(input);
