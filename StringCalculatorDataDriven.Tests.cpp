@@ -5,7 +5,7 @@ class TestPair{
 public:
 string input;
 int expectedValue;
-TestPair(string_input,int_expectedValue) :input{_input},expectedValue{_expectedValue}{
+TestPair(string _input,int _expectedValue) : input{_input}, expectedValue{_expectedValue}{
 }
 };
 
