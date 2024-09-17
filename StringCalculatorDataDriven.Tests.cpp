@@ -17,11 +17,11 @@ TestPair pair_three {"1",1};
 TestPair pair_four {"1,2",3};
 TestPair pair_five {"1,2,3",6};
 
-datalist push_back(pair_one);
-datalist push_back(pair_two);
-datalist push_back(pair_three);
-datalist push_back(pair_four);
-datalist push_back(pair_five);
+datalist.push_back(pair_one);
+datalist.push_back(pair_two);
+datalist.push_back(pair_three);
+datalist.push_back(pair_four);
+datalist.push_back(pair_five);
 
 //Iterate using a range-baised for-loop
   for (TestPair dataPair : datalist){
