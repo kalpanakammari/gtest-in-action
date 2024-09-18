@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
 #include "TestChallenge.h"
 #include<gmock/gmock.h>
-using testing:FloatEq;
+using testing::FloatEq;
+using testing::Return;
 
 
 //Stub - Fake Dependency
