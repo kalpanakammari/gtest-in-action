@@ -37,7 +37,7 @@ TEST_P(StringCalculatorParameterFixture,ParameterizedTest){
      Add(input,&fakeDisplayFunction);
       //actualValue=Add(input);
       //ASSERT_EQ(actualValue,expectedValue);
-    Add(input);
+    //Add(input);
 }
 
 
