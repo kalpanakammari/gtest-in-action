@@ -11,10 +11,10 @@ protected:
 class StringCalculatorParameterFixture:public StringCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
 
 };
-      input= std::get<0>(GetParam());
-      expectedValue= std::get<1>(GetParam())
 //Parameter Values
 INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFixture,testing::Values(
+    input= std::get<0>(GetParam());
+    expectedValue= std::get<1>(GetParam());
   make_tuple("", 0),
   make_tuple("0", 0),
   make_tuple("1", 1),
