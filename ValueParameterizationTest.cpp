@@ -7,6 +7,10 @@ protected:
     string input;
     int expectedValue;
     int actualValue;
+void SetUp() override {
+        input = std::get<0>(GetParam());
+        expectedValue = std::get<1>(GetParam());
+    }
 };
 class StringCalculatorParameterFixture:public StringCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
 
@@ -23,9 +27,6 @@ INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFi
   make_tuple("//;\n1;2",3),
   make_tuple("28,1001,1",29) 
 ));
-
-input= std::get<0>(GetParam());
-expectedValue= std::get<1>(GetParam());
 
 TEST_P(StringCalculatorParameterFixture,ParameterizedTest){
       //input= std::get<0>(GetParam());
