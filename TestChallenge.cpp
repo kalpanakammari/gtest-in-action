@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <assert.h>
+#include"TestChallenge.h"
  
 int alertFailureCount = 0;
+
+int getFailureCount(){
+return alertFailureCount;
+}
  
 int networkAlerter(float celcius) {
    //Communicate with Network, Require Internet Connectivity and credentials
