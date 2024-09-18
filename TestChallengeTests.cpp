@@ -1,12 +1,6 @@
 #include <gtest/gtest.h>
 #include "TestChallenge.h"
 
-int alertFailureCount = 0;
-
-int getFailureCount(){
-return alertFailureCount;
-}
-
 
 //Stub - Fake Dependency
 class NetworkAlerterStub:public INetworkAlerter{
