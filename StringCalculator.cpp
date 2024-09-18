@@ -43,7 +43,7 @@ vector<int> get_numbers(const string &input) {
 	return numbers;
 }
 
-void Add(const string &input),void(*displayPtr)(int) {
+void Add(const string &input,void(*displayPtr)(int)) {
 	if (input.empty())
 		(*displayPtr)(0);
 
