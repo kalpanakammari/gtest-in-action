@@ -10,6 +10,8 @@ protected:
 };
 class StringCalculatorParameterFixture:public StringCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
 protected:
+      string input;
+      int expectedValue;
       input= std::get<0>(GetParam());
       expectedValue= std::get<1>(GetParam());
 
