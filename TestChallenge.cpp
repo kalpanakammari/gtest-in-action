@@ -23,7 +23,7 @@ void alertInCelcius(float farenheit,INetworkAlerter *networkAlerterPtr) {
     }
 }
 
-int alertInCelciusFacade(float farenheit, INetworkAlerter *networkAlerterPtr){
+int alertInCelciusFacade(float farenheit,INetworkAlerter *networkAlerterPtr){
 alertInCelcius(farenheit,networkAlerterPtr);
  return getFailureCount();
  }
