@@ -29,9 +29,12 @@ INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFi
   make_tuple("28,1001,1",29) 
 ));
 
+void fakeDisplayFunction(int result){
+}
 TEST_P(StringCalculatorParameterFixture,ParameterizedTest){
       //input= std::get<0>(GetParam());
       //expectedValue= std::get<1>(GetParam());
+     Add(input,&fakeDisplayFunction);
       //actualValue=Add(input);
       //ASSERT_EQ(actualValue,expectedValue);
     Add(input);
