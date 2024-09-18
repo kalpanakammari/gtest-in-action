@@ -50,6 +50,5 @@ void Add(const string &input,void(*displayPtr)(int)) {
 	vector<int> numbers = get_numbers(input);
 
 	check_for_negatives(numbers);
-
-	(*displayPtr)(accumulate(numbers.begin(), numbers.end(), 0);
+        (*displayPtr)(accumulate(numbers.begin(), numbers.end(), 0));
 }
