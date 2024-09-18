@@ -51,5 +51,5 @@ void Add(const string &input,void(*displayPtr)(int)) {
 
 	check_for_negatives(numbers);
 
-	(*displayPtr)accumulate(numbers.begin(), numbers.end(), 0);
+	(*displayPtr)(accumulate(numbers.begin(), numbers.end(), 0);
 }
