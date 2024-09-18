@@ -11,8 +11,8 @@ public:
 };
 TEST(NetworkAlerterTestSuits,StateBasedTest){
   NetworkAlerterStub stub;
-  int failureCount alertInCelciusFascade(400,&stub);
-  AssertEQ(failureCount,0);
+  int failureCount= alertInCelciusFascade(400,&stub);
+  ASSERT_EQ(failureCount,1);
 }
 
 
